@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría de Software e Ingeniería Avanzada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/switch.css" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Nexus Digital</a>
+            <div class="d-flex">
+                <!-- Botón para cambiar Modo Oscuro/Claro (Requiere JS) -->
+                 <label class="switch m-1">
+                    <input type="checkbox" class="input__check btn btn-outline-info me-3" id="theme-toggle" aria-label="Cambiar tema">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <!-- 1. Encabezado (Identidad Visual) -->
+        <header class="hero-section mb-5 p-5 rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-4 fw-bold">Transformamos lo complejo en soluciones digitales intuitivas.</h1>
+                <p class="col-md-8 fs-4">Consultoría de software, ingeniería avanzada y arquitectura digital para el
+                    futuro de tu negocio.</p>
+                <button class="btn btn-neon btn-lg" data-bs-toggle="modal" data-bs-target="#modalBasico">Diagnóstico
+                    Rápido Gratuito</button>
+
+                <button class="btn btn-neon btn-lg mt-1" data-bs-toggle="modal" data-bs-target="#modalCompleto">Contacto
+                Avanzado</button>
+            </div>
+        </header>
+
+        <!-- 2. Bento Grid (Servicios Asimétricos) -->
+        <section class="mb-5">
+            <h2>Nuestros Servicios</h2>
+            <div class="row g-4">
+
+                <!-- Card 1 (Tamaño normal) -->
+                <div class="col-lg-6">
+                    <div class="glass-card h-100 p-4">
+                        <h3>Arquitectura Digital</h3>
+                        <p>Diseñamos sistemas robustos y escalables. Soluciones que perduran en el tiempo.</p>
+                        <a href="#" class="btn btn-outline-light">Saber más</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Tamaño normal) -->
+                <div class="col-lg-6">
+                    <div class="glass-card h-100 p-4">
+                        <h3>Ingeniería Avanzada</h3>
+                        <p>Aplicamos metodologías de vanguardia para resolver problemas de alta complejidad.</p>
+                        <a href="#" class="btn btn-outline-light">Saber más</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 (Tamaño grande para Bento) -->
+                <div class="col-lg-12">
+                    <div class="glass-card h-100 p-4">
+                        <h3>Desarrollo de Software a Medida</h3>
+                        <p>Creamos el software exacto que su empresa necesita, optimizado para rendimiento y seguridad.
+                        </p>
+                        <ul class="list-unstyled mt-3">
+                            <li>✔️ Desarrollo Ágil</li>
+                            <li>✔️ Integración de IA</li>
+                            <li>✔️ Seguridad Ciberresiliente</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección para Notificaciones Personalizadas (Requiere JS y CSS adicional) -->
+        <div id="notification-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1050;"></div>
+
+    </main>
+
+    <!-- 3. Modales para Formularios de Contacto -->
+
+    <!-- Modal 1: Básico (Email rápido) -->
+    <div class="modal fade" id="modalBasico" tabindex="-1" aria-labelledby="modalBasicoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalBasicoLabel">Diagnóstico Rápido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formBasico">
+                        <div class="mb-3">
+                            <label for="emailBasico" class="form-label">Tu Email</label>
+                            <input type="email" class="form-control" id="emailBasico" required>
+                        </div>
+                        <button type="submit" class="btn btn-neon w-100">Enviar para diagnóstico</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Completo (Protocolo detallado) -->
+    <div class="modal fade" id="modalCompleto" tabindex="-1" aria-labelledby="modalCompletoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalCompletoLabel">Protocolo de Contacto Detallado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCompleto">
+                        <div class="mb-3">
+                            <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombreCompleto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailCompleto" class="form-label">Email de Contacto</label>
+                            <input type="email" class="form-control" id="emailCompleto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="proyectoDetalles" class="form-label">Detalles del Proyecto</label>
+                            <textarea class="form-control" id="proyectoDetalles" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-neon w-100">Enviar Solicitud Detallada</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
